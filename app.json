@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "grocery",
+    "slug": "grocery",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "grocery"
+}
