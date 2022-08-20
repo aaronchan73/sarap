@@ -1,12 +1,19 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const Home = () => {
   return (
     <View>
-      <Text style={{color: 'red', fontSize: 40}}>My Grocery List</Text>
+      <Text style={styles.title}>My Grocery List</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  title: {
+    color: "white",
+    fontSize: 40,
+  },
+});
 
 export default Home;

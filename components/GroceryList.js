@@ -1,15 +1,22 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const GroceryList = () => {
   return (
     <View>
-      <Text style={{ color: "blue", fontSize: 20 }}>Lettuce</Text>
-      <Text style={{ color: "blue", fontSize: 20 }}>Chicken</Text>
-      <Text style={{ color: "blue", fontSize: 20 }}>Rice</Text>
-      <Text style={{ color: "blue", fontSize: 20 }}>Tomato</Text>
+      <Text style={styles.item}>Lettuce</Text>
+      <Text style={styles.item}>Chicken</Text>
+      <Text style={styles.item}>Rice</Text>
+      <Text style={styles.item}>Tomato</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  item: {
+    color: "white",
+    fontSize: 20,
+  },
+});
 
 export default GroceryList;
