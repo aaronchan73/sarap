@@ -1,21 +1,29 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import Item from "./Item";
 
 const GroceryList = ({ navigation }) => {
   return (
-    <View>
-      <Text style={styles.item}>Lettuce</Text>
-      <Text style={styles.item}>Chicken</Text>
-      <Text style={styles.item}>Rice</Text>
-      <Text style={styles.item}>Tomato</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>My Grocery List:</Text>
+      <Item name="Lettuce"/>
+      <Item name="Tomato"/>
+      <Item name="Chicken"/>
+      <Item name="Rice"/>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  item: {
+  title: {
     color: "white",
-    fontSize: 20,
+    fontSize: 40,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "#87E4DB",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
