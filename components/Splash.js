@@ -1,13 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Button } from "react-native";
 import splashArt from "../assets/splash_art.png";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Grocery</Text>
       <Text style={styles.caption}>Save money on groceries</Text>
       <Image source={splashArt} style={styles.splash_art} />
+      <Button
+        style={styles.button}
+        title=">"
+        onPress={() => navigation.navigate("GroceryList")}
+      />
     </View>
   );
 };
@@ -31,6 +36,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#87E4DB",
     alignItems: "center",
     justifyContent: "center",
+  },
+  button: {
+    color: "white",
   },
 });
 
