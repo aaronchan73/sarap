@@ -4,7 +4,7 @@ import splashArt from "../assets/splash_art.png";
 
 const Home = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>Grocery</Text>
       <Text style={styles.caption}>Save money on groceries</Text>
       <Image source={splashArt} style={styles.splash_art} />
@@ -25,6 +25,12 @@ const styles = StyleSheet.create({
     width: 343,
     height: 367,
     top: 30,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: "#87E4DB",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
