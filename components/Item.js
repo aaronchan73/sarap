@@ -8,7 +8,7 @@ const Item = ({ name }) => {
       <Button
         style={styles.button}
         title=">"
-        onPress={() => navigation.navigate("GroceryList")}
+        onPress={() => navigation.navigate("ItemPage")}
       />
     </View>
   );

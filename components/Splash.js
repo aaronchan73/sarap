@@ -5,7 +5,7 @@ import splashArt from "../assets/splash_art.png";
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Grocery</Text>
+      <Text style={styles.title}>Sarap</Text>
       <Text style={styles.caption}>Save money on groceries</Text>
       <Image source={splashArt} style={styles.splash_art} />
       <Button
