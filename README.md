@@ -1,4 +1,4 @@
-# Grocery App
+# Sarap
 An iOS application for saving money on groceries!
 
 ## Tech Stack
