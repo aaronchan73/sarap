@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 import Item from "./Item";
 
 const GroceryList = ({ navigation }) => {
@@ -10,6 +10,11 @@ const GroceryList = ({ navigation }) => {
       <Item name="Tomato" />
       <Item name="Chicken" />
       <Item name="Rice" />
+      <Button
+        style={styles.button}
+        title="Map"
+        onPress={() => navigation.navigate("Map")}
+      />
     </View>
   );
 };
@@ -24,6 +29,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#87E4DB",
     alignItems: "center",
     justifyContent: "center",
+  },
+  button: {
+    color: "white",
   },
 });
 
