@@ -6,10 +6,10 @@ const GroceryList = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>My Grocery List:</Text>
-      <Item name="Lettuce"/>
-      <Item name="Tomato"/>
-      <Item name="Chicken"/>
-      <Item name="Rice"/>
+      <Item name="Lettuce" />
+      <Item name="Tomato" />
+      <Item name="Chicken" />
+      <Item name="Rice" />
     </View>
   );
 };
