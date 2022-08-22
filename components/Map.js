@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 import MapView from "react-native-maps";
+import styles from "./Styles";
 
 const Map = () => {
   const [region] = useState({
@@ -11,23 +12,10 @@ const Map = () => {
   });
 
   return (
-    <View style={styles.container}>
+    <View style={styles.map_container}>
       <MapView initialRegion={region} style={styles.map} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    height: 800,
-    width: 400,
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject,
-  },
-});
 
 export default Map;

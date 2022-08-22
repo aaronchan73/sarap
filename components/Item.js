@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, Button } from "react-native";
 
 const Item = ({ name }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.item_container}>
       <Text style={styles.item}>{name}</Text>
       <Button
         style={styles.button}
@@ -13,18 +13,5 @@ const Item = ({ name }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  item: {
-    color: "white",
-    fontSize: 30,
-  },
-  container: {
-    backgroundColor: "#00ACB1",
-    borderRadius: 10,
-    margin: 5,
-    padding: 5,
-  },
-});
 
 export default Item;

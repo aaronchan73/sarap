@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { View, Text, Image, Button } from "react-native";
 import splashArt from "../assets/splash_art.png";
+import styles from "./Styles";
 
 const Home = ({ navigation }) => {
   return (
@@ -16,30 +17,5 @@ const Home = ({ navigation }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  title: {
-    color: "white",
-    fontSize: 40,
-  },
-  caption: {
-    color: "white",
-    fontSize: 20,
-  },
-  splash_art: {
-    width: 343,
-    height: 367,
-    top: 30,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#87E4DB",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  button: {
-    color: "white",
-  },
-});
 
 export default Home;

@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, Button } from "react-native";
 import Item from "./Item";
+import styles from "./Styles";
 
 const GroceryList = ({ navigation }) => {
   return (
@@ -18,21 +19,5 @@ const GroceryList = ({ navigation }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  title: {
-    color: "white",
-    fontSize: 40,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: "#87E4DB",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  button: {
-    color: "white",
-  },
-});
 
 export default GroceryList;
