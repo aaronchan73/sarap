@@ -21,6 +21,7 @@ const Map = () => {
           }}
           title="UBC"
           description="You are here."
+          pinColor="#87E4DB"
         />
       </MapView>
     </View>
