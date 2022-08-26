@@ -7,6 +7,17 @@ import Geolocation from "react-native-geolocation-service";
 const Map = () => {
   const [region, setRegion] = useState({});
   const delta = { latitudeDelta: 0.0922, longitudeDelta: 0.0421 };
+  const currMarker = (
+    <Marker
+      coordinate={{
+        latitude: region.latitude,
+        longitude: region.longitude,
+      }}
+      title="Hi!"
+      description="You are here."
+      pinColor="#87E4DB"
+    />
+  );
 
   useEffect(() => {
     Geolocation.getCurrentPosition(
@@ -34,15 +45,7 @@ const Map = () => {
   return (
     <View style={styles.map_container}>
       <MapView region={region} style={styles.map}>
-        <Marker
-          coordinate={{
-            latitude: 49.267665596,
-            longitude: -123.241999032,
-          }}
-          title="UBC"
-          description="You are here."
-          pinColor="#87E4DB"
-        />
+        {currMarker}
       </MapView>
     </View>
   );
