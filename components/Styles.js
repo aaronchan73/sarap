@@ -4,10 +4,12 @@ export default styles = StyleSheet.create({
   title: {
     color: "white",
     fontSize: 40,
+    paddingRight: 200
   },
   caption: {
     color: "white",
     fontSize: 20,
+    paddingRight: 80
   },
   splash_art: {
     width: 343,
@@ -23,7 +25,6 @@ export default styles = StyleSheet.create({
   button: {
     color: "white",
   },
-
   item: {
     color: "white",
     fontSize: 30,
