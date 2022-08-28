@@ -3,6 +3,7 @@ import { View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import styles from "./Styles";
 import Geolocation from "react-native-geolocation-service";
+import stores from "./Stores";
 
 const Map = () => {
   const [region, setRegion] = useState({});
@@ -15,7 +16,7 @@ const Map = () => {
       }}
       title="Hi!"
       description="You are here."
-      pinColor="#87E4DB"
+      pinColor="#00ACB1"
     />
   );
 
@@ -46,6 +47,17 @@ const Map = () => {
     <View style={styles.map_container}>
       <MapView region={region} style={styles.map}>
         {currMarker}
+        {stores.map((store) => (
+          <Marker
+            key={store["longitude"]}
+            coordinate={{
+              latitude: store["latitude"],
+              longitude: store["longitude"],
+            }}
+            title={store["name"]}
+            pinColor="#87E4DB"
+          />
+        ))}
       </MapView>
     </View>
   );
