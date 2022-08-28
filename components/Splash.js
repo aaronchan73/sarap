@@ -3,6 +3,7 @@ import { View, Text, Image, Button } from "react-native";
 import splashArt from "../assets/splash_art.png";
 import styles from "./Styles";
 import Geolocation from "react-native-geolocation-service";
+import splashBackground from "../assets/splash_background.png";
 
 const Home = ({ navigation }) => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = ({ navigation }) => {
         title=">"
         onPress={() => navigation.navigate("GroceryList")}
       />
+      <Image source={splashBackground} style={styles.background}/>
     </View>
   );
 };
