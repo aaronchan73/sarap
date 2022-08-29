@@ -20,7 +20,7 @@ const Home = ({ navigation }) => {
         title=">"
         onPress={() => navigation.navigate("GroceryList")}
       />
-      <Image source={splashBackground} style={styles.background}/>
+      {/* <Image source={splashBackground} style={styles.background}/> */}
     </View>
   );
 };
