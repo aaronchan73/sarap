@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
       <Button
         style={styles.button}
         title=">"
-        onPress={() => navigation.navigate("GroceryList")}
+        onPress={() => navigation.navigate("Map")}
       />
       {/* <Image source={splashBackground} style={styles.background}/> */}
     </View>
