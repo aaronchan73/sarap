@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import styles from "./Styles";
 import Geolocation from "react-native-geolocation-service";
 import stores from "./Stores";
+import MapBottom from "./MapBottom";
 
 const Map = () => {
   const [region, setRegion] = useState({});
@@ -44,21 +45,24 @@ const Map = () => {
   }, []);
 
   return (
-    <View style={styles.map_container}>
-      <MapView region={region} style={styles.map}>
-        {currMarker}
-        {stores.map((store) => (
-          <Marker
-            key={store["longitude"]}
-            coordinate={{
-              latitude: store["latitude"],
-              longitude: store["longitude"],
-            }}
-            title={store["name"]}
-            pinColor="#87E4DB"
-          />
-        ))}
-      </MapView>
+    <View style={styles.container}>
+      <View style={styles.map_container}>
+        <MapView region={region} style={styles.map}>
+          {currMarker}
+          {stores.map((store) => (
+            <Marker
+              key={store["longitude"]}
+              coordinate={{
+                latitude: store["latitude"],
+                longitude: store["longitude"],
+              }}
+              title={store["name"]}
+              pinColor="#87E4DB"
+            />
+          ))}
+        </MapView>
+      </View>
+      <MapBottom />
     </View>
   );
 };

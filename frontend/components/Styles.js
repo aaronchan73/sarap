@@ -5,11 +5,12 @@ export default styles = StyleSheet.create({
     color: "white",
     fontSize: 40,
     paddingRight: 200,
+    fontWeight: "600",
   },
   caption: {
     color: "white",
     fontSize: 20,
-    paddingRight: 80,
+    paddingRight: 85,
   },
   background: {},
   splash_art: {
@@ -38,13 +39,18 @@ export default styles = StyleSheet.create({
     padding: 5,
   },
   map_container: {
-    ...StyleSheet.absoluteFillObject,
-    height: 800,
+    // ...StyleSheet.absoluteFillObject,
+    height: 700,
     width: 400,
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
     alignItems: "center",
   },
   map: {
     ...StyleSheet.absoluteFillObject,
+  },
+  map_bottom: {
+    color: "white",
+    fontSize: 30,
+    paddingTop: 20,
   },
 });

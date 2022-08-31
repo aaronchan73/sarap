@@ -12,10 +12,26 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Splash" component={Splash} />
-        <Stack.Screen name="GroceryList" component={GroceryList} />
-        <Stack.Screen name="ItemPage" component={ItemPage} />
-        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen
+          name="Splash"
+          component={Splash}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="GroceryList"
+          component={GroceryList}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ItemPage"
+          component={ItemPage}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Map"
+          component={Map}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
