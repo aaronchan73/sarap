@@ -51,6 +51,13 @@ export default styles = StyleSheet.create({
   map_bottom: {
     color: "white",
     fontSize: 30,
+  },
+  map_bottom_container: {
+    flexDirection: "row",
     paddingTop: 20,
+  },
+  add_button: {
+    width: 40,
+    height: 40,
   },
 });
