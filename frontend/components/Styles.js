@@ -24,7 +24,8 @@ export default styles = StyleSheet.create({
     justifyContent: "center",
   },
   button: {
-    color: "white",
+    width: 50,
+    height: 50,
   },
   item: {
     color: "white",
