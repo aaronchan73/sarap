@@ -29,10 +29,14 @@ const MapBottom = () => {
               }}
             />
           </TouchableOpacity>
-          <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
-          <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
-          <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
-          <Image source={store} style={{width: 400, height: 300, alignSelf: 'center'}}/>
+          <Text style={styles.title}>Enter a New Store</Text>
+          <TextInput style={{ backgroundColor: "#00ACB1", height: 100 }} />
+          <TextInput style={{ backgroundColor: "#00ACB1", height: 100 }} />
+          <TextInput style={{ backgroundColor: "#00ACB1", height: 100 }} />
+          <Image
+            source={store}
+            style={{ width: 400, height: 300, alignSelf: "center" }}
+          />
         </View>
       </Modal>
       <Text style={styles.map_bottom}>Closest Grocery Stores</Text>
