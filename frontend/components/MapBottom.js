@@ -10,6 +10,7 @@ import {
 import styles from "./Styles";
 import add from "../assets/add.png";
 import rightArrow from "../assets/keyboard_arrow_right.png";
+import store from "../assets/store.png";
 
 const MapBottom = () => {
   const [show, setShow] = useState(false);
@@ -31,6 +32,7 @@ const MapBottom = () => {
           <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
           <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
           <TextInput style={{ backgroundColor: "#00ACB1", height: 40 }} />
+          <Image source={store} style={{width: 400, height: 300, alignSelf: 'center'}}/>
         </View>
       </Modal>
       <Text style={styles.map_bottom}>Closest Grocery Stores</Text>
