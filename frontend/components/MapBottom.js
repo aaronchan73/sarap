@@ -14,6 +14,9 @@ import store from "../assets/store.png";
 
 const MapBottom = () => {
   const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
 
   return (
     <View style={styles.map_bottom_container}>
