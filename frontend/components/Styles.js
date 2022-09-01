@@ -60,4 +60,10 @@ export default styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  input: {
+    backgroundColor: "#00ACB1",
+    height: 105,
+    padding: 20,
+    color: "#C1F0C1",
+  },
 });
