@@ -11,4 +11,6 @@ An iOS application for saving money on groceries!
 - React Native
 
 ### Back-end
-- Firestore
+- Node.js
+- Express.js
+- MySQL
