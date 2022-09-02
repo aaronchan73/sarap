@@ -12,7 +12,7 @@ import add from "../assets/add.png";
 import rightArrow from "../assets/keyboard_arrow_right.png";
 import store from "../assets/store.png";
 
-// const PORT = 
+// const PORT = ;
 
 const MapBottom = () => {
   const [show, setShow] = useState(false);
@@ -47,10 +47,20 @@ const MapBottom = () => {
               }}
             />
           </TouchableOpacity>
-          <Text style={{ ...styles.title, paddingLeft: 20, paddingTop: 15, fontSize: 20, fontWeight: 'bold' }}>
+          <Text
+            style={{
+              ...styles.title,
+              paddingLeft: 20,
+              paddingTop: 15,
+              fontSize: 20,
+              fontWeight: "bold",
+            }}
+          >
             Enter a New Store
           </Text>
-          <Text style={{ ...styles.caption, paddingLeft: 20, paddingTop: 20 }}>Name</Text>
+          <Text style={{ ...styles.caption, paddingLeft: 20, paddingTop: 20 }}>
+            Name
+          </Text>
           <TextInput
             style={styles.input}
             onChangeText={(name) => setName(name)}
@@ -65,10 +75,7 @@ const MapBottom = () => {
             style={styles.input}
             onChangeText={(long) => setLongitude(long)}
           />
-          <Image
-            source={store}
-            style={{ width: 400, height: 300, alignSelf: "center" }}
-          />
+          <Image source={store} style={styles.store_image} />
         </View>
       </Modal>
       <Text style={styles.map_bottom}>Closest Grocery Stores</Text>

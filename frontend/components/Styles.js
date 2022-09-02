@@ -66,4 +66,9 @@ export default styles = StyleSheet.create({
     padding: 20,
     color: "#C1F0C1",
   },
+  store_image: {
+    width: 400,
+    height: 300,
+    alignSelf: "center",
+  },
 });
