@@ -3,11 +3,13 @@ import { View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import styles from "./Styles";
 import Geolocation from "react-native-geolocation-service";
-import stores from "./Stores";
 import MapBottom from "./MapBottom";
+
+// const PORT = 
 
 const Map = () => {
   const [region, setRegion] = useState({});
+  const [stores, setStores] = useState([]);
   const delta = { latitudeDelta: 0.0922, longitudeDelta: 0.0421 };
   const currMarker = (
     <Marker
@@ -24,12 +26,6 @@ const Map = () => {
   useEffect(() => {
     Geolocation.getCurrentPosition(
       (position) => {
-        console.log(position);
-        console.log({
-          latitude: position["coords"]["latitude"],
-          longitude: position["coords"]["longitude"],
-          ...delta,
-        });
         setRegion({
           latitude: position["coords"]["latitude"],
           longitude: position["coords"]["longitude"],
@@ -42,6 +38,22 @@ const Map = () => {
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
+    fetch(`http://localhost:${PORT}/stores`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(async (res) => {
+      try {
+        const jsonRes = await res.json();
+        console.log("JSON RES");
+        console.log(jsonRes);
+
+        setStores(jsonRes);
+      } catch (err) {
+        console.log(err);
+      }
+    });
   }, []);
 
   return (
