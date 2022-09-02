@@ -12,6 +12,8 @@ import add from "../assets/add.png";
 import rightArrow from "../assets/keyboard_arrow_right.png";
 import store from "../assets/store.png";
 
+// const PORT = 
+
 const MapBottom = () => {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
@@ -22,7 +24,20 @@ const MapBottom = () => {
     <View style={styles.map_bottom_container}>
       <Modal animationType="slide" visible={show} presentationStyle="formSheet">
         <View style={{ backgroundColor: "#00ACB1" }}>
-          <TouchableOpacity onPress={() => setShow(false)}>
+          <TouchableOpacity
+            onPress={() => {
+              setShow(false);
+              fetch(
+                `http://localhost:${PORT}/name/${name}/latitude/${latitude}/longitude/${longitude}`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+              );
+            }}
+          >
             <Image
               source={rightArrow}
               style={{
@@ -36,11 +51,20 @@ const MapBottom = () => {
             Enter a New Store
           </Text>
           <Text style={{ ...styles.caption, paddingLeft: 20 }}>Name</Text>
-          <TextInput style={styles.input} />
+          <TextInput
+            style={styles.input}
+            onChangeText={(name) => setName(name)}
+          />
           <Text style={{ ...styles.caption, paddingLeft: 20 }}>Latitude</Text>
-          <TextInput style={styles.input} />
+          <TextInput
+            style={styles.input}
+            onChangeText={(lat) => setLatitude(lat)}
+          />
           <Text style={{ ...styles.caption, paddingLeft: 20 }}>Longitude</Text>
-          <TextInput style={styles.input} />
+          <TextInput
+            style={styles.input}
+            onChangeText={(long) => setLongitude(long)}
+          />
           <Image
             source={store}
             style={{ width: 400, height: 300, alignSelf: "center" }}
