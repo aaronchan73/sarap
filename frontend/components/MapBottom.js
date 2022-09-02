@@ -47,10 +47,10 @@ const MapBottom = () => {
               }}
             />
           </TouchableOpacity>
-          <Text style={{ ...styles.title, paddingLeft: 20, fontSize: 25 }}>
+          <Text style={{ ...styles.title, paddingLeft: 20, paddingTop: 15, fontSize: 20, fontWeight: 'bold' }}>
             Enter a New Store
           </Text>
-          <Text style={{ ...styles.caption, paddingLeft: 20 }}>Name</Text>
+          <Text style={{ ...styles.caption, paddingLeft: 20, paddingTop: 20 }}>Name</Text>
           <TextInput
             style={styles.input}
             onChangeText={(name) => setName(name)}
