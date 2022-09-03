@@ -12,7 +12,13 @@ export default styles = StyleSheet.create({
     fontSize: 20,
     paddingRight: 85,
   },
-  background: {},
+  background: {
+    flex: 1,
+    alignSelf: "flex-end",
+    zIndex: -1,
+    width: 300,
+    height: 500,
+  },
   splash_art: {
     width: 343,
     height: 367,
@@ -25,8 +31,10 @@ export default styles = StyleSheet.create({
     justifyContent: "center",
   },
   button: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
+    alignSelf: 'center',
+    marginTop: 20,
   },
   item: {
     color: "white",
@@ -70,5 +78,12 @@ export default styles = StyleSheet.create({
     width: 400,
     height: 300,
     alignSelf: "center",
+  },
+  circle: {
+    width: 100,
+    height: 100,
+    backgroundColor: "#00ACB1",
+    borderRadius: 50,
+    marginTop: 30 
   },
 });
