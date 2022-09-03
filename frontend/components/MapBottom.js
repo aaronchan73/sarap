@@ -12,7 +12,7 @@ import add from "../assets/add.png";
 import rightArrow from "../assets/keyboard_arrow_right.png";
 import store from "../assets/store.png";
 
-// const PORT = ;
+// const PORT = 
 
 const MapBottom = () => {
   const [show, setShow] = useState(false);
@@ -38,39 +38,28 @@ const MapBottom = () => {
               );
             }}
           >
-            <Image
-              source={rightArrow}
-              style={{
-                ...styles.button,
-                transform: [{ rotate: "90deg" }],
-                alignSelf: "center",
-              }}
-            />
+            <Image source={rightArrow} style={styles.down_arrow} />
           </TouchableOpacity>
-          <Text
-            style={{
-              ...styles.title,
-              paddingLeft: 20,
-              paddingTop: 15,
-              fontSize: 20,
-              fontWeight: "bold",
-            }}
-          >
-            Enter a New Store
-          </Text>
-          <Text style={{ ...styles.caption, paddingLeft: 20, paddingTop: 20 }}>
-            Name
-          </Text>
+          <Text style={styles.modal_title}>Enter a New Store</Text>
+          <Text style={{ ...styles.modal_caption, paddingTop: 20 }}>Name</Text>
           <TextInput
             style={styles.input}
             onChangeText={(name) => setName(name)}
           />
-          <Text style={{ ...styles.caption, paddingLeft: 20 }}>Latitude</Text>
+          <Text
+            style={styles.modal_caption}
+          >
+            Latitude
+          </Text>
           <TextInput
             style={styles.input}
             onChangeText={(lat) => setLatitude(lat)}
           />
-          <Text style={{ ...styles.caption, paddingLeft: 20 }}>Longitude</Text>
+          <Text
+            style={styles.modal_caption}
+          >
+            Longitude
+          </Text>
           <TextInput
             style={styles.input}
             onChangeText={(long) => setLongitude(long)}
