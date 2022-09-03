@@ -6,23 +6,26 @@ export default styles = StyleSheet.create({
     fontSize: 50,
     marginRight: 175,
     fontWeight: "600",
+    top: 375
   },
   caption: {
     color: "white",
     fontSize: 25,
     marginRight: 35,
+    top: 380
   },
   background: {
     flex: 1,
-    alignSelf: "flex-end",
     zIndex: -1,
-    width: 300,
+    width: 400,
     height: 500,
+    position: 'static'
   },
   splash_art: {
     width: 343,
     height: 367,
-    top: 30,
+    zIndex: 2,
+    top: 400,
   },
   container: {
     flex: 1,
@@ -47,7 +50,6 @@ export default styles = StyleSheet.create({
     padding: 5,
   },
   map_container: {
-    // ...StyleSheet.absoluteFillObject,
     height: 700,
     width: 400,
     justifyContent: "flex-start",
@@ -82,8 +84,11 @@ export default styles = StyleSheet.create({
   circle: {
     width: 100,
     height: 100,
-    backgroundColor: "#00ACB1",
+    backgroundColor: "#87E4DB",
     borderRadius: 50,
-    marginTop: 30 
+    marginTop: 30,
+    alignSelf: 'center',
+    zIndex: 1,
+    top: 385
   },
 });
