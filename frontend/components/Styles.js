@@ -3,14 +3,14 @@ import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
   title: {
     color: "white",
-    fontSize: 40,
-    paddingRight: 200,
+    fontSize: 50,
+    marginRight: 175,
     fontWeight: "600",
   },
   caption: {
     color: "white",
-    fontSize: 20,
-    paddingRight: 85,
+    fontSize: 25,
+    marginRight: 35,
   },
   background: {
     flex: 1,
