@@ -1,8 +1,8 @@
 import React from "react";
-import GroceryList from "./frontend/components/GroceryList";
-import Splash from "./frontend/components/Splash";
-import ItemPage from "./frontend/components/ItemPage";
-import Map from "./frontend/components/Map";
+import GroceryList from "./components/GroceryList";
+import Splash from "./components/Splash";
+import ItemPage from "./components/ItemPage";
+import Map from "./components/Map";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
