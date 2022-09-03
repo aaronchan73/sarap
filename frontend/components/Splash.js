@@ -16,10 +16,14 @@ const Home = ({ navigation }) => {
       <Text style={styles.title}>Sarap</Text>
       <Text style={styles.caption}>Save money on groceries</Text>
       <Image source={splashArt} style={styles.splash_art} />
-      <TouchableOpacity onPress={() => navigation.navigate("Map")}>
-        <Image source={rightArrow} style={styles.button} />
-      </TouchableOpacity>
-      {/* <Image source={splashBackground} style={styles.background}/> */}
+      <View style={{zIndex: 1}}>
+        <TouchableOpacity onPress={() => navigation.navigate("Map")}>
+          <View style={styles.circle}>
+            <Image source={rightArrow} style={styles.button} />
+          </View>
+        </TouchableOpacity>
+        <Image source={splashBackground} style={styles.background} />
+      </View>
     </View>
   );
 };

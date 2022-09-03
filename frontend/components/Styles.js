@@ -6,20 +6,20 @@ export default styles = StyleSheet.create({
     fontSize: 50,
     marginRight: 175,
     fontWeight: "600",
-    top: 375
+    top: 375,
   },
   caption: {
     color: "white",
     fontSize: 25,
     marginRight: 35,
-    top: 380
+    top: 380,
   },
   background: {
     flex: 1,
     zIndex: -1,
     width: 400,
     height: 500,
-    position: 'static'
+    position: "static",
   },
   splash_art: {
     width: 343,
@@ -36,7 +36,7 @@ export default styles = StyleSheet.create({
   button: {
     width: 60,
     height: 60,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: 20,
   },
   item: {
@@ -87,8 +87,30 @@ export default styles = StyleSheet.create({
     backgroundColor: "#87E4DB",
     borderRadius: 50,
     marginTop: 30,
-    alignSelf: 'center',
+    alignSelf: "center",
     zIndex: 1,
-    top: 385
+    top: 385,
+  },
+  down_arrow: {
+    width: 50,
+    height: 50,
+    transform: [{ rotate: "90deg" }],
+    alignSelf: "center",
+  },
+  modal_title: {
+    color: "white",
+    fontSize: 40,
+    paddingRight: 200,
+    fontWeight: "600",
+    paddingLeft: 20,
+    paddingTop: 15,
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  modal_caption: {
+    color: "white",
+    fontSize: 20,
+    paddingRight: 85,
+    paddingLeft: 20,
   },
 });
